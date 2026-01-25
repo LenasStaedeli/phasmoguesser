@@ -56,7 +56,7 @@ return (
         <h1 hidden={hiddenpic === 1 ? false : true}>Welcome to Phasmo Guesser</h1>
         <h2 hidden={hiddenpic === 1 ? false : true}>Click "map role" to get your spot</h2>
         <div>
-            <img src={`/Spots/${randomMap}/${randomMap}${randomPic}${randomPicFloor}.jpg`}
+            <img src={`${import.meta.env.BASE_URL}Spots/${randomMap}/${randomMap}${randomPic}${randomPicFloor}.jpg`}
                  style={{height: "50%", width: "50%"}}
                  alt="Tanglewood"
                  hidden={hiddenpic}/>
