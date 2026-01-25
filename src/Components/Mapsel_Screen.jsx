@@ -18,14 +18,14 @@ export default function Mapsel_Screen({randomMap, randomPic}) {
             </div>
             <div style={{margin: "3px", textAlign: "center"}}>
                 <img
-                    src={`${import.meta.env.BASE_URL}Mapselpics/tanglewood.jpg`}
+                    src={`https://lenasstaedeli.github.io/phasmoguesser/Mapselpics/tanglewood.jpg`}
                     style={{width: "30%", height: "30%", margin: "10px"}}
                     alt="Tanglewood"
                     onClick={() => clickpic("Tanglewood")}
                 />
                 <div>6 Tanglewood Drive</div>
 
-                <img src={`${import.meta.env.BASE_URL}Mapselpics/edgefield.jpg`}
+                <img src={`https://lenasstaedeli.github.io/phasmoguesser/Mapselpics/edgefield.jpg`}
                      style={{width: "30%", height: "30%", margin: "10px"}}
                      alt="Tanglewood"
                      onClick={() => clickpic("Edgefield")}
@@ -33,7 +33,7 @@ export default function Mapsel_Screen({randomMap, randomPic}) {
                 />
                 <div>42 Edgefield Road</div>
 
-                <img src={`${import.meta.env.BASE_URL}Mapselpics/ridgeview.jpg`}
+                <img src={`https://lenasstaedeli.github.io/phasmoguesser/Mapselpics/ridgeview.jpg`}
                      style={{width: "30%", height: "30%", margin: "10px"}}
                      alt="Tanglewood"
                      onClick={() => clickpic("Ridgeview")}
@@ -41,7 +41,7 @@ export default function Mapsel_Screen({randomMap, randomPic}) {
                 />
                 <div>10 Ridgeview Court</div>
 
-                <img src={`${import.meta.env.BASE_URL}Mapselpics/nellsdiner.jpg`}
+                <img src={`https://lenasstaedeli.github.io/phasmoguesser/Mapselpics/nellsdiner.jpg`}
                      style={{width: "30%", height: "30%", margin: "10px"}}
                      alt="Tanglewood"
                      onClick={() => clickpic("Nells Diner")}
@@ -49,7 +49,7 @@ export default function Mapsel_Screen({randomMap, randomPic}) {
                 />
                 <div>Nell's Diner</div>
 
-                <img src={`${import.meta.env.BASE_URL}Mapselpics/grafton.jpg`}
+                <img src={`https://lenasstaedeli.github.io/phasmoguesser/Mapselpics/grafton.jpg`}
                      style={{width: "30%", height: "30%", margin: "10px"}}
                      alt="Tanglewood"
                      onClick={() => clickpic("Grafton Farmhouse")}
@@ -57,7 +57,7 @@ export default function Mapsel_Screen({randomMap, randomPic}) {
                 />
                 <div>Grafton Farmhouse</div>
 
-                <img src={`${import.meta.env.BASE_URL}Mapselpics/willow.jpg`}
+                <img src={`https://lenasstaedeli.github.io/phasmoguesser/Mapselpics/willow.jpg`}
                      style={{width: "30%", height: "30%", margin: "10px"}}
                      alt="Tanglewood"
                      onClick={() => clickpic("Willow Street")}
@@ -65,7 +65,7 @@ export default function Mapsel_Screen({randomMap, randomPic}) {
                 />
                 <div>13 Willow Street</div>
 
-                <img src={`${import.meta.env.BASE_URL}Mapselpics/pointhope.jpg`}
+                <img src={`https://lenasstaedeli.github.io/phasmoguesser/Mapselpics/pointhope.jpg`}
                      style={{width: "30%", height: "30%", margin: "10px"}}
                      alt="Tanglewood"
                      onClick={() => clickpic("Point Hope")}
@@ -73,7 +73,7 @@ export default function Mapsel_Screen({randomMap, randomPic}) {
                 />
                 <div>Point Hope</div>
 
-                <img src={`${import.meta.env.BASE_URL}Mapselpics/highschool.jpg`}
+                <img src={`https://lenasstaedeli.github.io/phasmoguesser/Mapselpics/highschool.jpg`}
                      style={{width: "30%", height: "30%", margin: "10px"}}
                      alt="Tanglewood"
                      onClick={() => clickpic("High School")}
@@ -81,7 +81,7 @@ export default function Mapsel_Screen({randomMap, randomPic}) {
                 />
                 <div>Brownstone High School</div>
 
-                <img src={`${import.meta.env.BASE_URL}Mapselpics/bleasdale.jpg`}
+                <img src={`https://lenasstaedeli.github.io/phasmoguesser/Mapselpics/bleasdale.jpg`}
                      style={{width: "30%", height: "30%", margin: "10px"}}
                      alt="Tanglewood"
                      onClick={() => clickpic("Bleasdale")}
@@ -90,7 +90,7 @@ export default function Mapsel_Screen({randomMap, randomPic}) {
                 <div>Bleasdale Farmhouse</div>
 
 
-                <img src={`${import.meta.env.BASE_URL}Mapselpics/sunnymed.jpg`}
+                <img src={`https://lenasstaedeli.github.io/phasmoguesser/Mapselpics/sunnymed.jpg`}
                      style={{width: "30%", height: "30%", margin: "10px"}}
                      alt="Tanglewood"
                      onClick={() => clickpic("Sunny Meadows")}
@@ -98,7 +98,7 @@ export default function Mapsel_Screen({randomMap, randomPic}) {
                 />
                 <div>Sunny Meadows</div>
 
-                <img src={`${import.meta.env.BASE_URL}Mapselpics/prison.jpg`}
+                <img src={`https://lenasstaedeli.github.io/phasmoguesser/Mapselpics/prison.jpg`}
                      style={{width: "30%", height: "30%", margin: "10px"}}
                      alt="Tanglewood"
                      onClick={() => clickpic("Prison")}
@@ -106,7 +106,7 @@ export default function Mapsel_Screen({randomMap, randomPic}) {
                 />
                 <div>Prison</div>
 
-                <img src={`${import.meta.env.BASE_URL}Mapselpics/maplelodge.jpg`}
+                <img src={`https://lenasstaedeli.github.io/phasmoguesser/Mapselpics/maplelodge.jpg`}
                      style={{width: "30%", height: "30%", margin: "10px"}}
                      alt="Tanglewood"
                      onClick={() => clickpic("Maple lodge")}
@@ -114,7 +114,7 @@ export default function Mapsel_Screen({randomMap, randomPic}) {
                 />
                 <div>Maple Lodge Campsite</div>
 
-                <img src={`${import.meta.env.BASE_URL}Mapselpics/campwoodwin.jpg`}
+                <img src={`https://lenasstaedeli.github.io/phasmoguesser/Mapselpics/campwoodwin.jpg`}
                      style={{width: "30%", height: "30%", margin: "10px"}}
                      alt="Tanglewood"
                      onClick={() => clickpic("Camp Woodwind")}

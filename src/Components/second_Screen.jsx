@@ -31,7 +31,7 @@ export default function SecondScreen({randomMap, randomPic, setRandomMap, setRan
             <>
                 <h1 hidden={hiddenpic === 1 ? false : true}>You've passed the first stage!👏</h1>
                 <div>
-                    <img src={`${import.meta.env.BASE_URL}Spots/${randomMap}/${randomMap}${randomPic}${randomPicFloor}.jpg`} style={{height: "50%", width: "50%"}}
+                    <img src={`https://lenasstaedeli.github.io/phasmoguesser/Spots/${randomMap}/${randomMap}${randomPic}${randomPicFloor}.jpg`} style={{height: "50%", width: "50%"}}
                          alt="Tanglewood"/>
                 </div>
                 <p>now press "F" on your keyboard to select the floor of the Map this picture is from</p>
