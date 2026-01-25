@@ -1,6 +1,6 @@
 import './App.css'
 import First_Screen from './Components/First_Screen.jsx'
-import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
+import {BrowserRouter as Router, Routes, Route, Link, HashRouter} from "react-router-dom";
 import Mapsel_Screen from "./Components/Mapsel_Screen.jsx";
 import {useState} from "react";
 import Losingscreen from "./Components/Losingscreen.jsx";
@@ -15,7 +15,7 @@ function App() {
     const [randomPicFloor, setRandomPicFloor] = useState()
     return (
     <>
-        <Router>
+        <HashRouter>
             <Routes>
                 <Route path="/" element={<First_Screen randomMap={randomMap} randomPic={randomPic} setRandomMap={setRandomMap} setRandomPic={setRandomPic} randomPicFloor={randomPicFloor} setRandomPicFloor={setRandomPicFloor}/>} />
                 <Route path="/Mapsel" element={<Mapsel_Screen randomMap={randomMap} randomPic={randomPic} setRandomMap={setRandomMap} setRandomPic={setRandomPic}/>} />
@@ -24,7 +24,7 @@ function App() {
                 <Route path="/Floorsel" element={<Floorsel_Screen randomMap={randomMap} randomPic={randomPic} setRandomMap={setRandomMap} setRandomPic={setRandomPic} randomPicFloor={randomPicFloor} setRandomPicFloor={setRandomPicFloor}/>} />
                 <Route path="/thirdscreen" element={<ThirdScreen randomMap={randomMap} randomPic={randomPic} setRandomMap={setRandomMap} setRandomPic={setRandomPic} randomPicFloor={randomPicFloor} setRandomPicFloor={setRandomPicFloor}/>} />
             </Routes>
-        </Router>
+        </HashRouter>
     </>
   )
 }
