@@ -68,6 +68,7 @@ return (
             map role
         </button>
         <p>Press "M" on your keyboard to select the Map this picture is from</p>
+        <small>currently only available for keyboard based devices</small>
     </>
 )
 /*const maps = [

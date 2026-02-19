@@ -1,10 +1,11 @@
-import React, {useRef} from "react";
+import React, {useRef, useState} from "react";
 import data from "../data/solutions.json";
 
 export default function Thirdscreen({
                                         randomMap, randomPic, setRandomMap, setRandomPic, randomPicFloor,
                                         setRandomPicFloor, points, setPoints
                                     }) {
+    const [roundcounter, setRoundcounter] = useState(0)
     const overlayref = useRef(null)
 
     const handleclick = (e) => {
@@ -22,8 +23,6 @@ export default function Thirdscreen({
 
         const solution = data[`${randomMap}${randomPic}${randomPicFloor}.jpg`]
         const distance = Math.floor(Math.sqrt((solution.x - x) ** 2 + (solution.y - y) ** 2))
-        alert(`${x}, ${y}`)
-        alert(`${distance}`)
         console.log(distance)
 
         console.log(data["bild1"])
@@ -37,14 +36,21 @@ export default function Thirdscreen({
         else{
             newPoints = points + (1000 - distance * 5)
         }
-        alert(`${newPoints}`)
+        alert(`Your distance is ${distance} you've got ${newPoints} Points`)
+        roundcount()
+    }
+    function roundcount(){
+        if(roundcounter <= 5){
+            setRoundcounter(roundcounter + 1)
+        }
     }
 
     return (
-        <div style={{ position: "relative", display: "inline-block"}}>
+        <div style={{ position: "relative", display: "inline-block", margin:0}}>
             <img src={`https://lenasstaedeli.github.io/phasmoguesser/Floors/${randomMap}/${randomMap}${randomPicFloor}.png`}
                  alt={"Edgefield"}
-                 style={{ display: "block", maxWidth: "700px"}}
+                 style={{ display: "block", maxWidth: "80 vw", maxHeight: "80vh", objectFit: "contain"}}
+
             />
             <div
                 ref={overlayref}
@@ -60,6 +66,7 @@ export default function Thirdscreen({
                 }}
             >
             </div>
+            <button hidden={roundcounter > 5 ? true : false}>continue</button>
 
         </div>
     );
