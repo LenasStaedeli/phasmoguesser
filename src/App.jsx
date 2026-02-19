@@ -13,6 +13,7 @@ function App() {
     const [randomMap, setRandomMap] = useState("")
     const [randomPic, setRandomPic] = useState(1)
     const [randomPicFloor, setRandomPicFloor] = useState()
+    const [points, setPoints] = useState(0)
     return (
     <>
         <HashRouter>
@@ -22,7 +23,7 @@ function App() {
                 <Route path="/Looser" element={<Losingscreen randomMap={randomMap} randomPic={randomPic} setRandomMap={setRandomMap} setRandomPic={setRandomPic}/>} />
                 <Route path="/Secondscreen" element={<SecondScreen randomMap={randomMap} randomPic={randomPic} setRandomMap={setRandomMap} setRandomPic={setRandomPic} randomPicFloor={randomPicFloor} setRandomPicFloor={setRandomPicFloor}/>} />
                 <Route path="/Floorsel" element={<Floorsel_Screen randomMap={randomMap} randomPic={randomPic} setRandomMap={setRandomMap} setRandomPic={setRandomPic} randomPicFloor={randomPicFloor} setRandomPicFloor={setRandomPicFloor}/>} />
-                <Route path="/thirdscreen" element={<Thirdscreen randomMap={randomMap} randomPic={randomPic} setRandomMap={setRandomMap} setRandomPic={setRandomPic} randomPicFloor={randomPicFloor} setRandomPicFloor={setRandomPicFloor}/>} />
+                <Route path="/thirdscreen" element={<Thirdscreen randomMap={randomMap} randomPic={randomPic} setRandomMap={setRandomMap} setRandomPic={setRandomPic} randomPicFloor={randomPicFloor} setRandomPicFloor={setRandomPicFloor} points={points} setPoints={setPoints}/>} />
             </Routes>
         </HashRouter>
     </>

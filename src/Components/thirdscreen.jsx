@@ -2,7 +2,8 @@ import React, {useRef} from "react";
 import data from "../data/solutions.json";
 
 export default function Thirdscreen({
-                                        randomMap, randomPic, setRandomMap, setRandomPic, randomPicFloor, setRandomPicFloor
+                                        randomMap, randomPic, setRandomMap, setRandomPic, randomPicFloor,
+                                        setRandomPicFloor, points, setPoints
                                     }) {
     const overlayref = useRef(null)
 
@@ -21,10 +22,22 @@ export default function Thirdscreen({
 
         const solution = data[`${randomMap}${randomPic}${randomPicFloor}.jpg`]
         const distance = Math.floor(Math.sqrt((solution.x - x) ** 2 + (solution.y - y) ** 2))
+        alert(`${x}, ${y}`)
         alert(`${distance}`)
         console.log(distance)
 
         console.log(data["bild1"])
+        evaluate(distance, solution)
+    }
+    function evaluate(distance, solution){
+        let newPoints = 0
+        if(distance <= 5){
+            newPoints = points + 1000
+        }
+        else{
+            newPoints = points + (1000 - distance * 5)
+        }
+        alert(`${newPoints}`)
     }
 
     return (
