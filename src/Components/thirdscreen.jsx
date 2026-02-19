@@ -1,5 +1,6 @@
 import React, {useRef, useState} from "react";
 import data from "../data/solutions.json";
+import {useNavigate} from "react-router-dom";
 
 export default function Thirdscreen({
                                         randomMap, randomPic, setRandomMap, setRandomPic, randomPicFloor,
@@ -7,7 +8,9 @@ export default function Thirdscreen({
                                     }) {
     const [roundcounter, setRoundcounter] = useState(0)
     const overlayref = useRef(null)
+    const [hidden, setHidden] = useState(true)
 
+    const navigate = useNavigate()
     const handleclick = (e) => {
         const rect = overlayref.current.getBoundingClientRect()
 
@@ -17,8 +20,8 @@ export default function Thirdscreen({
         const coorx = clickx - rect.left
         const coory = clicky - rect.top
 
-        const x = Math.floor(( coorx/rect.width ) * 500)
-        const y = Math.floor(( coory/rect.height ) * 500)
+        const x = Math.floor((coorx / rect.width) * 500)
+        const y = Math.floor((coory / rect.height) * 500)
 
 
         const solution = data[`${randomMap}${randomPic}${randomPicFloor}.jpg`]
@@ -28,46 +31,57 @@ export default function Thirdscreen({
         console.log(data["bild1"])
         evaluate(distance, solution)
     }
-    function evaluate(distance, solution){
+
+    function evaluate(distance, solution) {
         let newPoints = 0
-        if(distance <= 5){
-            newPoints = points + 1000
+        if (distance <= 5) {
+            newPoints = 1000
+        } else {
+            newPoints = (1000 - distance * 5)
         }
-        else{
-            newPoints = points + (1000 - distance * 5)
-        }
+        setPoints(points + newPoints)
         alert(`Your distance is ${distance} you've got ${newPoints} Points`)
         roundcount()
     }
-    function roundcount(){
-        if(roundcounter <= 5){
+
+    function onclickcontinue(){
+        navigate("/")
+    }
+
+    function roundcount() {
+        if (roundcounter <= 5) {
             setRoundcounter(roundcounter + 1)
+            setHidden(false)
         }
     }
 
     return (
-        <div style={{ position: "relative", display: "inline-block", margin:0}}>
-            <img src={`https://lenasstaedeli.github.io/phasmoguesser/Floors/${randomMap}/${randomMap}${randomPicFloor}.png`}
-                 alt={"Edgefield"}
-                 style={{ display: "block", maxWidth: "80 vw", maxHeight: "80vh", objectFit: "contain"}}
+        <div style={{display: "flex",
+            flexDirection: "column",
+            alignItems: "center"}}>
+            <div style={{position: "relative", display: "inline-block", margin: 0}}>
+                <img
+                    src={`https://lenasstaedeli.github.io/phasmoguesser/Floors/${randomMap}/${randomMap}${randomPicFloor}.png`}
+                    alt={"Edgefield"}
+                    style={{display: "block", maxWidth: "80 vw", maxHeight: "80vh", objectFit: "contain"}}
 
-            />
-            <div
-                ref={overlayref}
-                onClick={handleclick}
-                style={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    width: "100%",
-                    height: "100%",
-                    cursor: "crosshair"
+                />
+                <div
+                    ref={overlayref}
+                    onClick={handleclick}
+                    style={{
+                        position: "absolute",
+                        top: 0,
+                        left: 0,
+                        width: "100%",
+                        height: "100%",
+                        cursor: "crosshair"
 
-                }}
-            >
+                    }}
+                >
+                </div>
             </div>
-            <button hidden={roundcounter > 5 ? true : false}>continue</button>
-
+            <button hidden={hidden} style={{display:"block"}} onClick={onclickcontinue}>continue</button>
         </div>
     );
 }

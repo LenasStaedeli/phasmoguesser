@@ -3,7 +3,7 @@ import {useNavigate} from "react-router-dom";
 
 
 export default function First_Screen({
-                                         randomMap, randomPic, setRandomMap, setRandomPic, randomPicFloor, setRandomPicFloor
+                                         randomMap, randomPic, setRandomMap, setRandomPic, randomPicFloor, setRandomPicFloor, points, setPoints
                                      }) {
     const [hiddenpic, setHiddenpic] = useState(1)
     const navigate = useNavigate()
@@ -64,11 +64,13 @@ return (
         <button onClick={() =>
             rolemapselect()
         }
-                disabled={hiddenpic === 1 ? false : true}>
+                //disabled={hiddenpic === 1 ? false : true}
+            >
             map role
         </button>
         <p>Press "M" on your keyboard to select the Map this picture is from</p>
         <small>currently only available for keyboard based devices</small>
+        <p>points: {points}</p>
     </>
 )
 /*const maps = [
