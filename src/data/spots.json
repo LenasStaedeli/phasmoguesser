@@ -1,0 +1,65 @@
+{
+  "1": {
+    "map": "Tanglewood",
+    "id": 1,
+    "floor": "basement",
+    "x": 278,
+    "y": 340
+  },
+  "2": {
+    "map": "Tanglewood",
+    "id": 2,
+    "floor": "first",
+    "x": 222,
+    "y": 130
+  },
+  "3": {
+    "map": "Tanglewood",
+    "id": 3,
+    "floor": "first",
+    "x": 371,
+    "y": 407
+  },
+  "4": {
+    "map": "Tanglewood",
+    "id": 4,
+    "floor": "first",
+    "x": 174,
+    "y": 84
+  },
+  "5": {
+    "map": "Tanglewood",
+    "id": 5,
+    "floor": "first",
+    "x": 127,
+    "y": 208
+  },
+  "6": {
+    "map": "Edgefield",
+    "id": 1,
+    "floor": "first",
+    "x": 209,
+    "y": 194
+  },
+  "7": {
+    "map": "Edgefield",
+    "id": 2,
+    "floor": "first",
+    "x": 345,
+    "y": 117
+  },
+  "8": {
+    "map": "Edgefield",
+    "id": 3,
+    "floor": "second",
+    "x": 229,
+    "y": 89
+  },
+  "9": {
+    "map": "Edgefield",
+    "id": 4,
+    "floor": "second",
+    "x": 127,
+    "y": 324
+  }
+}

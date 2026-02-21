@@ -10,13 +10,13 @@ import Thirdscreen from "./Components/thirdscreen.jsx";
 import Final_Screen from "./Components/Final_Screen.jsx";
 
 
+
+
 function App() {
-    const [randomMap, setRandomMap] = useState("")
-    const [randomPic, setRandomPic] = useState(1)
-    const [randomPicFloor, setRandomPicFloor] = useState()
     const [points, setPoints] = useState(0)
     const [roundcounter, setRoundcounter] = useState(0)
     const [highscore, setHighscore] = useState(0)
+    const [mapselect, setMapselect] = useState(1)
     return (
     <>
         <small
@@ -48,14 +48,13 @@ function App() {
         </small>
         <HashRouter>
             <Routes>
-                <Route path="/" element={<First_Screen randomMap={randomMap} randomPic={randomPic} setRandomMap={setRandomMap} setRandomPic={setRandomPic} randomPicFloor={randomPicFloor} setRandomPicFloor={setRandomPicFloor} points={points} setPoints={setPoints}/>} />
-                <Route path="/Mapsel" element={<Mapsel_Screen randomMap={randomMap} randomPic={randomPic} setRandomMap={setRandomMap} setRandomPic={setRandomPic} points={points} setPoints={setPoints}/>} />
-                <Route path="/Looser" element={<Losingscreen randomMap={randomMap} randomPic={randomPic} setRandomMap={setRandomMap} setRandomPic={setRandomPic} points={points} setPoints={setPoints} roundcounter={roundcounter} setRoundcounter={setRoundcounter} highscore={highscore} setHighscore={setHighscore} randomPicFloor={randomPicFloor}/>} />
-                <Route path="/Secondscreen" element={<SecondScreen randomMap={randomMap} randomPic={randomPic} setRandomMap={setRandomMap} setRandomPic={setRandomPic} randomPicFloor={randomPicFloor} setRandomPicFloor={setRandomPicFloor}/>} />
-                <Route path="/Floorsel" element={<Floorsel_Screen randomMap={randomMap} randomPic={randomPic} setRandomMap={setRandomMap} setRandomPic={setRandomPic} randomPicFloor={randomPicFloor} setRandomPicFloor={setRandomPicFloor} points={points} setPoints={setPoints}/>} />
-                <Route path="/thirdscreen" element={<Thirdscreen randomMap={randomMap} randomPic={randomPic} setRandomMap={setRandomMap} setRandomPic={setRandomPic} randomPicFloor={randomPicFloor} setRandomPicFloor={setRandomPicFloor} points={points} setPoints={setPoints} roundcounter={roundcounter} setRoundcounter={setRoundcounter} highscore={highscore} setHighscore={setHighscore} />}/>
+                <Route path="/" element={<First_Screen mapselect={mapselect} setMapselect={setMapselect}/>} />
+                <Route path="/Mapsel" element={<Mapsel_Screen points={points} setPoints={setPoints} mapselect={mapselect}/>} />
+                <Route path="/Looser" element={<Losingscreen mapselect={mapselect} points={points} setPoints={setPoints} setRoundcounter={setRoundcounter} setHighscore={setHighscore}/>} />
+                <Route path="/Secondscreen" element={<SecondScreen mapselect={mapselect} />} />
+                <Route path="/Floorsel" element={<Floorsel_Screen mapselect={mapselect} points={points} setPoints={setPoints}/>} />
+                <Route path="/thirdscreen" element={<Thirdscreen mapselect={mapselect} points={points} setPoints={setPoints} roundcounter={roundcounter} setRoundcounter={setRoundcounter} setHighscore={setHighscore} />}/>
                 <Route path="/winscreen" element={<Final_Screen  points={points} setPoints={setPoints} setRoundcounter={setRoundcounter}/>}/>
-                {/*USE YAGNI IT'S to messy*/ }
             </Routes>
         </HashRouter>
     </>
