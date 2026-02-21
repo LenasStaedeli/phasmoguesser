@@ -1,9 +1,10 @@
 import {useNavigate} from "react-router-dom";
-export default function Floorsel_Screen({randomPicFloor, randomMap}) {
+export default function Floorsel_Screen({randomPicFloor, randomMap, setPoints, points}) {
     const navigate = useNavigate()
 
     function clickpic(floor){
         if (randomPicFloor === floor){
+            setPoints(points + 200)
             navigate("/thirdscreen")
         } else {
             navigate("/Looser")
@@ -14,7 +15,7 @@ export default function Floorsel_Screen({randomPicFloor, randomMap}) {
         <>
             <div>
             <h1>Floor Selection Screen</h1>
-            <button onClick={() => navigate("/")}>Back</button>
+            <button onClick={() => navigate("/Secondscreen")}>Back</button>
             </div>
             {randomMap === "Tanglewood" && (
                 <>

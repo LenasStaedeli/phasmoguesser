@@ -1,9 +1,10 @@
 import {useNavigate} from "react-router-dom";
 
-export default function Mapsel_Screen({randomMap, randomPic}) {
+export default function Mapsel_Screen({randomMap, randomPic, setPoints, points}) {
     const navigate = useNavigate()
     function clickpic(map){
         if (randomMap === map){
+            setPoints(points + 300)
             navigate("/Secondscreen")
         }
         else{

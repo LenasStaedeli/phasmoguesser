@@ -64,13 +64,12 @@ return (
         <button onClick={() =>
             rolemapselect()
         }
-                //disabled={hiddenpic === 1 ? false : true}
+                disabled={hiddenpic === 1 ? false : true}
             >
             map role
         </button>
         <p>Press "M" on your keyboard to select the Map this picture is from</p>
         <small>currently only available for keyboard based devices</small>
-        <p>points: {points}</p>
     </>
 )
 /*const maps = [
@@ -80,7 +79,7 @@ return (
         "Grafton Farmhouse",
         "High School",
         "Maple lodge",
-        "Nell's Diner",
+        "Nells Diner",
         "Point Hope",
         "Prison",
         "Ridgeview",
