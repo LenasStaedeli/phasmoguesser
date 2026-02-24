@@ -4,13 +4,13 @@ import data from "../data/spots.json";
 
 
 export default function First_Screen({
-                                         mapselect, setMapselect
+                                         mapselect, setMapselect, hiddenpic, setHiddenpic
                                      }) {
-    const [hiddenpic, setHiddenpic] = useState(1)
     const navigate = useNavigate()
     const mapselector = data[mapselect]
-
-
+    console.log(`https://lenasstaedeli.github.io/phasmoguesser/Spots/${mapselector.map}/${mapselector.map}${mapselector.id}${mapselector.floor}`)
+    console.log(hiddenpic)
+    
     function rolemapselect() {
         setMapselect(Math.floor(Math.random() * 9) + 1)
         setHiddenpic(0)

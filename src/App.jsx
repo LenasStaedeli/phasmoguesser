@@ -17,6 +17,7 @@ function App() {
     const [roundcounter, setRoundcounter] = useState(0)
     const [highscore, setHighscore] = useState(0)
     const [mapselect, setMapselect] = useState(0.5)
+    const [hiddenpic, setHiddenpic] = useState(1)
     return (
     <>
         <small
@@ -48,8 +49,8 @@ function App() {
         </small>
         <HashRouter>
             <Routes>
-                <Route path="/" element={<First_Screen mapselect={mapselect} setMapselect={setMapselect}/>} />
-                <Route path="/Mapsel" element={<Mapsel_Screen points={points} setPoints={setPoints} mapselect={mapselect}/>} />
+                <Route path="/" element={<First_Screen mapselect={mapselect} setMapselect={setMapselect} hiddenpic={hiddenpic} setHiddenpic={setHiddenpic}/>} />
+                <Route path="/Mapsel" element={<Mapsel_Screen points={points} setPoints={setPoints} mapselect={mapselect} setMapselect={setMapselect}/>} />
                 <Route path="/Looser" element={<Losingscreen mapselect={mapselect} points={points} setPoints={setPoints} setRoundcounter={setRoundcounter} setHighscore={setHighscore}/>} />
                 <Route path="/Secondscreen" element={<SecondScreen mapselect={mapselect} />} />
                 <Route path="/Floorsel" element={<Floorsel_Screen mapselect={mapselect} points={points} setPoints={setPoints}/>} />

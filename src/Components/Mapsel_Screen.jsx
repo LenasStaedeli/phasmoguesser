@@ -1,7 +1,7 @@
 import {useNavigate} from "react-router-dom";
 import data from "../data/spots.json";
 
-export default function Mapsel_Screen({setPoints, points, mapselect}) {
+export default function Mapsel_Screen({setPoints, points, mapselect, setMapselect}) {
     const navigate = useNavigate()
     const mapselector = data[mapselect]
 
@@ -14,11 +14,17 @@ export default function Mapsel_Screen({setPoints, points, mapselect}) {
         }
     }
 
+    function clickback(){
+        navigate("/")
+        setMapselect(mapselect)
+
+    }
+
     return (
         <>
             <div>
                 <h1>Map Selection Screen</h1>
-                <button onClick={() => navigate("/")}>Back</button>
+                <button onClick={clickback}>Back</button>
             </div>
             <div style={{margin: "3px", textAlign: "center"}}>
                 <img
