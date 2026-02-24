@@ -16,7 +16,7 @@ function App() {
     const [points, setPoints] = useState(0)
     const [roundcounter, setRoundcounter] = useState(0)
     const [highscore, setHighscore] = useState(0)
-    const [mapselect, setMapselect] = useState(1)
+    const [mapselect, setMapselect] = useState(0.5)
     return (
     <>
         <small

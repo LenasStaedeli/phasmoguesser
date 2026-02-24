@@ -1,4 +1,9 @@
 {
+  "0.5": {
+    "map": "Load",
+    "id": 1,
+    "floor": "Load"
+  },
   "1": {
     "map": "Tanglewood",
     "id": 1,
