@@ -2,14 +2,15 @@ import {useNavigate} from "react-router-dom";
 import data from "../data/spots.json";
 
 
-export default function Losingscreen({points, setPoints, setRoundcounter, highscore, mapselect}) {
+export default function Losingscreen({points, setPoints, setRoundcounter, highscore, mapselect, setHiddenpic}) {
     const mapselector = data[mapselect]
     const navigate = useNavigate()
 
     function reset() {
         setRoundcounter(0)
         setPoints(0)
-        localStorage.setItem("highscore", highscore > points ? highscore : points)
+        setHiddenpic(1)
+        localStorage.setItem("highscore", localStorage.getItem("highscore") > points ? localStorage.getItem("highscore") : points)
         navigate("/")
     }
 

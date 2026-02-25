@@ -4,13 +4,13 @@ import data from "../data/spots.json";
 
 
 export default function First_Screen({
-                                         mapselect, setMapselect, hiddenpic, setHiddenpic
+                                         mapselect, setMapselect, hiddenpic, setHiddenpic, points, roundcounter
                                      }) {
     const navigate = useNavigate()
     const mapselector = data[mapselect]
     console.log(`https://lenasstaedeli.github.io/phasmoguesser/Spots/${mapselector.map}/${mapselector.map}${mapselector.id}${mapselector.floor}`)
     console.log(hiddenpic)
-    
+
     function rolemapselect() {
         setMapselect(Math.floor(Math.random() * 9) + 1)
         setHiddenpic(0)
@@ -34,8 +34,8 @@ export default function First_Screen({
 
 
     return (
-        <>            <h1 hidden={hiddenpic === 1 ? false : true}>Welcome to Phasmo Guesser</h1>
-            <h2 hidden={hiddenpic === 1 ? false : true}>Click "map role" to get your spot</h2>
+        <>
+            <h1 hidden={hiddenpic === 1 ? false : true}>{points > 0 ? `Good Job you've made it to round ${roundcounter + 1}` : `Welcome to Phasmo-Guesser`}</h1>
             <div>
                 <img
                     src={`https://lenasstaedeli.github.io/phasmoguesser/Spots/${mapselector.map}/${mapselector.map}${mapselector.id}${mapselector.floor}.${mapselector === 0.5 ? `png` : `jpg`}`}
@@ -50,7 +50,7 @@ export default function First_Screen({
             >
                 map role
             </button>
-            <p>Press "M" on your keyboard to select the Map this picture is from</p>
+            <p>{mapselect >= 1 ? `Press "M" on your keyboard to select the Map this picture is from` : `Click "Map role" to get your Map`}</p>
             <small>currently only available for keyboard based devices</small>
         </>
     )

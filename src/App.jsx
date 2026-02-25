@@ -8,6 +8,7 @@ import SecondScreen from "./Components/second_Screen.jsx";
 import Floorsel_Screen from "./Components/Floorsel_Screen.jsx";
 import Thirdscreen from "./Components/thirdscreen.jsx";
 import Final_Screen from "./Components/Final_Screen.jsx";
+import Spotsel_screen from "./Components/Spotsel_screen.jsx";
 
 
 
@@ -49,13 +50,14 @@ function App() {
         </small>
         <HashRouter>
             <Routes>
-                <Route path="/" element={<First_Screen mapselect={mapselect} setMapselect={setMapselect} hiddenpic={hiddenpic} setHiddenpic={setHiddenpic}/>} />
+                <Route path="/" element={<First_Screen mapselect={mapselect} setMapselect={setMapselect} hiddenpic={hiddenpic} setHiddenpic={setHiddenpic} points={points} roundcounter={roundcounter}/>} />
                 <Route path="/Mapsel" element={<Mapsel_Screen points={points} setPoints={setPoints} mapselect={mapselect} setMapselect={setMapselect}/>} />
-                <Route path="/Looser" element={<Losingscreen mapselect={mapselect} points={points} setPoints={setPoints} setRoundcounter={setRoundcounter} setHighscore={setHighscore}/>} />
+                <Route path="/Looser" element={<Losingscreen mapselect={mapselect} points={points} setPoints={setPoints} setRoundcounter={setRoundcounter} setHighscore={setHighscore} setHiddenpic={setHiddenpic}/>} />
                 <Route path="/Secondscreen" element={<SecondScreen mapselect={mapselect} />} />
                 <Route path="/Floorsel" element={<Floorsel_Screen mapselect={mapselect} points={points} setPoints={setPoints}/>} />
-                <Route path="/thirdscreen" element={<Thirdscreen mapselect={mapselect} points={points} setPoints={setPoints} roundcounter={roundcounter} setRoundcounter={setRoundcounter} setHighscore={setHighscore} />}/>
-                <Route path="/winscreen" element={<Final_Screen  points={points} setPoints={setPoints} setRoundcounter={setRoundcounter}/>}/>
+                <Route path="/spotsel" element={<Spotsel_screen mapselect={mapselect} points={points} setPoints={setPoints} roundcounter={roundcounter} setRoundcounter={setRoundcounter} setHighscore={setHighscore} setHiddenpic={setHiddenpic} setMapselect={setMapselect}/>}/>
+                <Route path="/winscreen" element={<Final_Screen  points={points} setPoints={setPoints} setRoundcounter={setRoundcounter} setHiddenpic={setHiddenpic}/>}/>
+                <Route path="/thirdscreen" element={<Thirdscreen mapselect={mapselect}/>}/>
             </Routes>
         </HashRouter>
     </>

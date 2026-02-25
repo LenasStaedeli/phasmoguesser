@@ -24,7 +24,7 @@ export default function SecondScreen({mapselect}) {
 
     return (
         <>
-            <h1 hidden={hiddenpic === 1 ? false : true}>You've passed the first stage!👏</h1>
+            <h1 hidden={hiddenpic === 1 ? false : true}>You've passed the second stage and earned +300 Points!👏</h1>
             <div>
                 <img
                     src={`https://lenasstaedeli.github.io/phasmoguesser/Spots/${mapselector.map}/${mapselector.map}${mapselector.id}${mapselector.floor}.jpg`}
