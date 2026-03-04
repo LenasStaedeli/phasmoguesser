@@ -57,3 +57,48 @@ export default function Floorsel_Screen({setPoints, points, mapselect}) {
         </>
     )
 }
+/*
+    const maps = [
+        "Tanglewood",
+        "Edgefield",
+        "Ridgeview",
+        "Willow",
+        "Pointhope",
+        "Gafton",
+        "Bleasdale",
+        "Prison",
+        "Higschool",
+        "Campwoodwind",
+        "Maplelodge",
+        "nellsdiner",
+        "Sunnymeadows"
+    ]
+    const floor = [
+      "basement"
+      "first"
+      "second"
+      "third"
+      "fourth"
+      "fifth"
+      "sixth"
+      "seventh"
+      "eighth"
+      "ninth"
+      "tenth"
+    ]
+    const number = [
+        []
+        []
+        []
+        []
+        []
+        []
+        []
+        []
+        []
+        []
+        []
+        []
+        []
+    ]
+ */
